@@ -1,4 +1,4 @@
-`<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -133,7 +133,7 @@ p{ margin:0; }
 .nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:28px; height:76px; }
 .brand{ display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:700; font-size:21px; color:var(--heading); white-space:nowrap; flex:0 0 auto; }
 .nav-links{ display:flex; align-items:center; gap:34px; margin-left:12px; }
-.nav-links a{ font-weight:600; font-size:14.5px; color:var(--ink); position:relative; padding:4px 0; }
+.nav-links a{ font-weight:600; font-size:14.5px; color:var(--ink); position:relative; padding:4px 0; white-space:nowrap; flex:0 0 auto; }
 .nav-links a::after{ content:''; position:absolute; left:0; right:100%; bottom:-2px; height:2px; background:var(--blue); transition:right .22s ease; }
 .nav-links a:hover::after{ right:0; }
 .nav-cta{ display:flex; align-items:center; gap:16px; }
@@ -212,9 +212,15 @@ p{ margin:0; }
 .med-ring-outer::before{ top:0; left:50%; }
 .med-ring-outer::after{ top:50%; left:100%; }
 .med-ring-inner{ position:absolute; inset:26px; border-radius:50%; border:1.5px solid var(--border); }
-.med-star{ position:absolute; inset:18px; }
-.med-star .sq{ position:absolute; inset:0; background:var(--blue); clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%); }
-.med-star .sq.r2{ transform:rotate(45deg); }
+.med-star{  position:absolute; inset:18px; }
+.med-star .sq{ transform:rotate(60deg); position:absolute; inset:0; background:var(--blue); clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%); }
+.med-star .sq.r2{ transform:rotate(45deg); background-color: #1B3688; }
+.med-badge{
+  position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:0 70px; pointer-events:none;
+}
+.med-badge-num{ font-family:var(--serif); font-weight:700; font-size:27px; color:#FFFFFF; line-height:1.18; }
+.med-badge-sub{ font-family:var(--sans); font-weight:600; font-size:11.5px; letter-spacing:.6px; color:rgba(255,255,255,.82); margin-top:9px; text-transform:uppercase; }
 .med-core{
   position:absolute; inset:64px; border-radius:50%; background:var(--blue-deep);
   border:3px solid var(--white); box-shadow:0 20px 45px -15px rgba(20,44,102,.5); overflow:hidden;
@@ -235,11 +241,14 @@ p{ margin:0; }
   .medallion-wrap{ height:320px; order:-1; }
   .medallion{ width:280px; height:280px; }
   .med-book .ln{ display:none; }
+  .med-badge{ padding:0 44px; }
+  .med-badge-num{ font-size:19px; }
+  .med-badge-sub{ font-size:9.5px; letter-spacing:.4px; }
   .hero{ padding:56px 0 70px; }
 }
 
 /* ================= SECTION SHELL ================= */
-section{ padding:96px 0; }
+section{ padding:96px 0; scroll-margin-top:90px; }
 .section-head{ max-width:640px; margin-bottom:56px; }
 .section-head h2{ font-size:clamp(30px,3.6vw,44px); line-height:1.12; margin:16px 0 14px; }
 .section-head p{ font-size:17px; line-height:1.65; color:var(--muted); }
@@ -282,6 +291,21 @@ section{ padding:96px 0; }
   margin-top:34px; text-align:center; padding:22px; border-radius:14px;
   background:var(--bg-soft); font-size:15px; color:var(--heading); font-weight:600;
 }
+
+/* ================= STUDY MATERIAL (teaser) ================= */
+.study-grid{ display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+.study-card{
+  padding:34px 32px; border-radius:18px; background:var(--card); border:1px solid var(--border);
+  display:flex; flex-direction:column; transition:transform .2s ease, box-shadow .2s ease, background-color .35s ease;
+}
+.study-card:hover{ transform:translateY(-4px); box-shadow:0 24px 44px -24px rgba(20,44,102,.28); }
+.study-card-top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
+.study-tag{ font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--blue); }
+.study-count{ font-size:12px; font-weight:700; color:var(--blue); background:var(--bg-soft); border:1px solid var(--border); padding:5px 12px; border-radius:999px; }
+.study-card h3{ font-size:26px; margin-bottom:10px; }
+.study-card p{ color:var(--ink); font-size:15px; line-height:1.65; margin-bottom:24px; flex:1; }
+.study-card .btn{ align-self:flex-start; }
+@media (max-width:700px){ .study-grid{ grid-template-columns:1fr; } }
 
 /* ================= INCLUDES ================= */
 .includes-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
@@ -385,6 +409,7 @@ footer{ padding:64px 0 36px; }
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#courses">Courses</a>
+      <a href="study-material.html">Study Material</a>
       <a href="#includes">What's Included</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
@@ -404,6 +429,7 @@ footer{ padding:64px 0 36px; }
   <div class="wrap mobile-menu" id="mobileMenu">
     <a href="#about">About</a>
     <a href="#courses">Courses</a>
+    <a href="study-material.html">Study Material</a>
     <a href="#includes">What's Included</a>
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
@@ -427,7 +453,7 @@ footer{ padding:64px 0 36px; }
       </div>
       <div class="hero-stats">
         <div><strong>5</strong><span>Courses</span></div>
-        <div><strong>10</strong><span>Weeks</span></div>
+        <div><strong>4-5</strong><span>Months</span></div>
         <div><strong>Live</strong><span>On Zoom</span></div>
         <div><strong>6</strong><span>Certificates</span></div>
       </div>
@@ -441,20 +467,9 @@ footer{ padding:64px 0 36px; }
         <div class="med-ring-outer"></div>
         <div class="med-ring-inner"></div>
         <div class="med-star"><div class="sq"></div><div class="sq r2"></div></div>
-        <div class="med-core">
-          <div class="crescent-outer"></div>
-          <div class="crescent-cut"></div>
-          <div class="med-book">
-            <div class="page left"></div>
-            <div class="page right"></div>
-            <div class="spine"></div>
-            <div class="ln" style="top:14px;left:12px;width:62px;transform:rotate(-6deg);"></div>
-            <div class="ln" style="top:27px;left:9px;width:67px;transform:rotate(-6deg);"></div>
-            <div class="ln" style="top:40px;left:7px;width:69px;transform:rotate(-6deg);"></div>
-            <div class="ln" style="top:14px;left:102px;width:62px;transform:rotate(6deg);"></div>
-            <div class="ln" style="top:27px;left:100px;width:67px;transform:rotate(6deg);"></div>
-            <div class="ln" style="top:40px;left:98px;width:69px;transform:rotate(6deg);"></div>
-          </div>
+        <div class="med-badge">
+          <span class="med-badge-num">Only 25 Seats</span>
+          <span class="med-badge-sub">Small Batch, More Attention</span>
         </div>
       </div>
     </div>
@@ -508,58 +523,59 @@ footer{ padding:64px 0 36px; }
     <div class="section-head reveal">
       <span class="eyebrow">The Curriculum</span>
       <h2>Five courses. One path from letters to ayat.</h2>
-      <p>Each course runs two weeks and builds directly on the one before it &mdash; complete all five, in order, to earn the Program Certificate.</p>
+      <p>Each course runs four weeks and builds directly on the one before it &mdash; complete all five, in order, to earn the Program Certificate.</p>
     </div>
 
     <div class="course-list">
       <div class="course reveal">
         <div class="course-num">01</div>
         <div class="course-body">
-          <h3>Arabic Foundations</h3>
-          <p>Alphabet, connected letters, and reading fluency &mdash; the building blocks for everything that follows.</p>
-          <div class="tag-row"><span class="tag">Alphabet &amp; Sounds</span><span class="tag">Reading Fluency</span><span class="tag">Core Vocabulary</span></div>
+          <h3>Nahw I &middot; Grammar</h3>
+          <p>Arabic sentence structure: nouns, verbs, and how words relate to one another in a sentence.</p>
+          <div class="tag-row"><span class="tag">Sentence Structure</span><span class="tag">Parts of Speech</span><span class="tag">Case Endings (Intro)</span></div>
         </div>
-        <div class="course-dur">2 Weeks</div>
+        <div class="course-dur">4 Weeks</div>
       </div>
 
       <div class="course reveal">
         <div class="course-num">02</div>
         <div class="course-body">
-          <h3>Nahw I &middot; Grammar</h3>
-          <p>Arabic sentence structure: nouns, verbs, and how words relate to one another in a sentence.</p>
-          <div class="tag-row"><span class="tag">Sentence Structure</span><span class="tag">Parts of Speech</span><span class="tag">Case Endings (Intro)</span></div>
+          <h3>Sarf I &middot; Morphology</h3>
+          <p>Verb roots and conjugation patterns &mdash; how a single root generates a whole family of words.</p>
+          <div class="tag-row"><span class="tag">Verb Roots</span><span class="tag">Conjugation Patterns</span><span class="tag">Verbal Nouns</span></div>
         </div>
-        <div class="course-dur">2 Weeks</div>
+
+        <div class="course-dur">4 Weeks</div>
       </div>
 
       <div class="course reveal">
         <div class="course-num">03</div>
         <div class="course-body">
-          <h3>Sarf I &middot; Morphology</h3>
+          <h3>Intermediate Sarf II &middot; Morphology</h3>
           <p>Verb roots and conjugation patterns &mdash; how a single root generates a whole family of words.</p>
           <div class="tag-row"><span class="tag">Verb Roots</span><span class="tag">Conjugation Patterns</span><span class="tag">Verbal Nouns</span></div>
         </div>
-        <div class="course-dur">2 Weeks</div>
+        <div class="course-dur">4 Weeks</div>
       </div>
 
       <div class="course reveal">
         <div class="course-num">04</div>
         <div class="course-body">
-          <h3>Qur'anic Vocabulary</h3>
-          <p>A core lexicon built directly from high-frequency words that appear throughout the Qur'an.</p>
-          <div class="tag-row"><span class="tag">High-Frequency Words</span><span class="tag">Root-Based Learning</span><span class="tag">Memorization Drills</span></div>
-        </div>
-        <div class="course-dur">2 Weeks</div>
+          <h3>Intermediate Nahw II &middot; Grammar</h3>
+          <p>Arabic sentence structure: nouns, verbs, and how words relate to one another in a sentence.</p>
+          <div class="tag-row"><span class="tag">Sentence Structure</span><span class="tag">Parts of Speech</span><span class="tag">Case Endings (Intro)</span></div>
+        </div>          
+        <div class="course-dur">4 Weeks</div>
       </div>
 
       <div class="course reveal">
         <div class="course-num">05</div>
         <div class="course-body">
-          <h3>Applied Qur'anic Reading</h3>
-          <p>Bringing Nahw, Sarf, and vocabulary together to read and analyze short ayat independently.</p>
-          <div class="tag-row"><span class="tag">Guided Ayat Reading</span><span class="tag">Grammar in Context</span><span class="tag">Independent Practice</span></div>
-        </div>
-        <div class="course-dur">2 Weeks</div>
+          <h3>Balagha &middot; Rhetoric</h3>
+          <p>Arabic sentence structure: nouns, verbs, and how words relate to one another in a sentence.</p>
+          <div class="tag-row"><span class="tag">Sentence Structure</span><span class="tag">Parts of Speech</span><span class="tag">Case Endings (Intro)</span></div>
+        </div>          
+        <div class="course-dur">4 Weeks</div>
       </div>
     </div>
 
@@ -567,8 +583,39 @@ footer{ padding:64px 0 36px; }
   </div>
 </section>
 
+<!-- ================= STUDY MATERIAL (teaser) ================= -->
+<section id="study-material" class="section-tint">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Study Material</span>
+      <h2>Every lecture, downloadable and ready to review.</h2>
+      <p>Slides for every session, organized by course, so you can revisit anything at your own pace.</p>
+    </div>
+    <div class="study-grid">
+      <div class="study-card reveal">
+        <div class="study-card-top">
+          <span class="study-tag">Course 01</span>
+          <span class="study-count">12 Lectures</span>
+        </div>
+        <h3>Nahw I</h3>
+        <p>Arabic sentence structure, parts of speech, and case endings &mdash; slide decks for all 12 lectures.</p>
+        <a href="study-material.html#nahw-i" class="btn btn-ghost">Browse Nahw I Slides ↗</a>
+      </div>
+      <div class="study-card reveal">
+        <div class="study-card-top">
+          <span class="study-tag">Course 02</span>
+          <span class="study-count">12 Lectures</span>
+        </div>
+        <h3>Sarf I</h3>
+        <p>Verb roots, conjugation patterns, and verbal nouns &mdash; slide decks for all 12 lectures.</p>
+        <a href="study-material.html#sarf-i" class="btn btn-ghost">Browse Sarf I Slides ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= WHAT'S INCLUDED ================= -->
-<section id="includes" class="section-tint">
+<section id="includes">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">What's Included</span>
@@ -622,7 +669,7 @@ footer{ padding:64px 0 36px; }
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
       </div>
       <div>
-        <h3>[ Instructor Name ]</h3>
+        <h3>Bilal Ibn Jamil</h3>
         <span class="role">Founder &amp; Lead Instructor, Essential Qur'anic Arabic</span>
         <p>[ Write a short instructor bio here &mdash; academic background (ijazah, madrasah, university), years of teaching experience, and what drew you to teaching Nahw and Sarf specifically. Two to three sentences is plenty. ]</p>
         <p>[ Optional: mention total number of students taught, previous batches run, or any relevant credentials worth highlighting. ]</p>
@@ -648,7 +695,7 @@ footer{ padding:64px 0 36px; }
       <div class="price-card reveal">
         <h3>Single Course</h3>
         <p class="price-desc">Try one course before committing to the full path.</p>
-        <div class="price-amt">[ PKR 2,500 ]<sup>/course</sup></div>
+        <div class="price-amt">PKR 1,000<sup>/course</sup></div>
         <p class="price-per">Billed once per course, 2 weeks each</p>
         <ul class="price-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg>Full access to one 2-week course</li>
@@ -663,8 +710,8 @@ footer{ padding:64px 0 36px; }
         <span class="price-badge">Best Value</span>
         <h3>Full Program &middot; All 5 Courses</h3>
         <p class="price-desc">The complete path, alphabet to applied reading.</p>
-        <div class="price-amt">[ PKR 10,000 ]</div>
-        <p class="price-per">One-time &middot; save [ 20% ] vs. paying per course</p>
+        <div class="price-amt">PKR 4,500</div>
+        <p class="price-per">One-time &middot; save 10% vs. paying per course</p>
         <ul class="price-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg>All 5 courses, 10 weeks total</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg>Live classes + recordings, every course</li>
@@ -723,9 +770,9 @@ footer{ padding:64px 0 36px; }
 <section class="cta-band">
   <div class="hero-ar">القرآن</div>
   <div class="wrap">
-    <span class="eyebrow" style="color:#8FA6EE;">Batch #2 &middot; Enrolling Now</span>
+    <span class="eyebrow" style="color:#8FA6EE;">Batch #3 &middot; Enrolling Now</span>
     <h2>Ready to start reading the Qur’an with understanding?</h2>
-    <p>Live classes begin [ 3 August 2026 ]. Seats in this batch are limited.</p>
+    <p>Live classes begin 3 September 2026. Seats in this batch are limited to 25.</p>
     <div class="cta-actions">
       <a href="https://forms.gle/2UCA8MqqVZhwpC8a7" target="_blank" rel="noopener" class="btn btn-light">Register Now</a>
       <a href="mailto:bilaljamiljtu@gmail.com" class="btn btn-ghost" style="border-color:rgba(255,255,255,.35); color:#fff;">Email a Question</a>
