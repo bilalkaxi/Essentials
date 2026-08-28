@@ -411,6 +411,8 @@ footer{ padding:64px 0 36px; }
   font-weight:700; font-size:13.5px; letter-spacing:.4px; color:var(--blue);
   border:1.5px solid var(--blue); border-radius:999px; padding:10px 22px;
 }
+.nav-links a.red2::after {
+  background: red; }
 .quicknav a:hover{ background:var(--bg-soft); }
 
 .lecture-section-head{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:36px; }
@@ -442,7 +444,11 @@ footer{ padding:64px 0 36px; }
 }
 .lecture-download:hover{ background:var(--blue); color:var(--white); border-color:var(--blue); }
 .lecture-download svg{ width:15px; height:15px; }
-
+.red {
+  background-color: red;
+  padding: 10px;
+  color: white;
+}
 .material-note{
   max-width:820px; margin:0 auto 50px; text-align:center; padding:16px 22px;
   border-radius:12px; background:var(--bg-soft); color:var(--muted); font-size:13.5px; line-height:1.6;
@@ -462,7 +468,7 @@ footer{ padding:64px 0 36px; }
     <div class="nav-links">
       <a href="index.html#about">About</a>
       <a href="index.html#courses">Courses</a>
-      <a href="study-material.html" style="color:var(--blue);">Study Material</a>
+      <a href="study-material.html" style="color:red;" >Study Material</a>
       <a href="index.html#includes">What's Included</a>
       <a href="index.html#pricing">Pricing</a>
       <a href="index.html#faq">FAQ</a>
@@ -494,6 +500,8 @@ footer{ padding:64px 0 36px; }
 <!-- ================= PAGE HEADER ================= -->
 <header class="page-header">
   <div class="wrap">
+    <span class="red">NOT AVAILABLE AT THE MOMENT</span>
+    <br><br><br>
     <div><a href="index.html" class="back-link">&larr; Back to Essential Qur'anic Arabic</a></div>
     <span class="eyebrow" style="justify-content:center;">Study Material</span>
     <h1>Every lecture, ready to download.</h1>
