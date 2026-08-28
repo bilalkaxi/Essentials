@@ -394,7 +394,21 @@ section{ padding:96px 0; scroll-margin-top:90px; }
 .cta-band p{ color:var(--blue-tint2); font-size:17px; margin-bottom:34px; }
 .cta-actions{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:30px; }
 .cta-meta{ font-size:13.5px; color:var(--blue-tint2); }
+.instructor-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
 
+.instructor-photo img {
+  width: 250%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0%; /* 0% = top, 50% = center horizontally */
+  display: block;
+}
 /* ================= FOOTER ================= */
 footer{ padding:64px 0 36px; }
 .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:48px; margin-bottom:48px; }
@@ -461,8 +475,8 @@ footer{ padding:64px 0 36px; }
       </div>
       <div class="hero-stats">
         <div><strong>5</strong><span>Courses</span></div>
-        <div><strong>1</strong><span>Month each</span></div>
-        <div><strong>Live</strong><span>On Zoom</span></div>
+        <div><strong>One</strong><span>Month each</span></div>
+        <div><strong>Live</strong><span>On Google Meet</span></div>
         <div><strong>6</strong><span>Certificates</span></div>
       </div>
     </div>
@@ -636,7 +650,7 @@ footer{ padding:64px 0 36px; }
       <div class="include-card reveal">
         <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2247A6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M9.5 14V8l6 3-6 3z" fill="#2247A6" stroke="none"/></svg></div>
         <h4>Live interactive classes</h4>
-        <p>Real-time teaching over Zoom with open Q&amp;A &mdash; not a pre-recorded video course.</p>
+        <p>Real-time teaching over Google Meet with open Q&amp;A &mdash; not a pre-recorded video course.</p>
       </div>
       <div class="include-card reveal">
         <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2247A6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.3 2"/></svg></div>
@@ -676,11 +690,11 @@ footer{ padding:64px 0 36px; }
     </div>
     <div class="instructor reveal">
       <div class="instructor-photo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+        <img src="profile-pic.png" alt="profile-pic">
       </div>
       <div>
         <h3>Bilal Ibn Jamil</h3>
-        <span class="role">Founder &amp; Lead Instructor, Essential Qur'anic Arabic</span>
+        <span class="role">Lead Instructor, Essential Qur'anic Arabic</span>
         <p>I founded Essential Qur'anic Arabic out of a deep love for the Qur'an and a desire to connect people to their Creator.
            I studied under Bayyinah Institute's Dream Intensive program and am currently completing a degree in Computer Science.
            Over the past 2+ years, I've taught Nahw, Sarf, and Tajweed to over 10 students across 3 batches.
