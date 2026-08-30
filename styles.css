@@ -573,3 +573,19 @@ footer{ padding:64px 0 36px; }
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
+/* WhatsApp Pulse Effect - Add this only */
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.whatsapp-btn {
+    animation: whatsapp-pulse 2s infinite;
+}
