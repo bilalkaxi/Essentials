@@ -75,7 +75,7 @@
   prevBtn.addEventListener("click", function () { prev(); resetAutoplay(); });
   nextBtn.addEventListener("click", function () { next(); resetAutoplay(); });
 
-  function startAutoplay() { timer = setInterval(next, 6000); }
+  function startAutoplay() { timer = setInterval(next, 3000); }
   function resetAutoplay() { clearInterval(timer); startAutoplay(); }
   if (testimonials.length > 1) startAutoplay();
 
