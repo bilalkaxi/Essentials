@@ -14,10 +14,12 @@
   --blue-deep:#142C66;
   --blue-tint:#EEF1FB;
   --blue-tint2:#E2E8FA;
+  --purple:#8B5CF6;
+  --purple-hover:#7C4DD0;
   --ink:#1C2440;
   --muted:#7A86B5;
   --white:#FFFFFF;
-
+  --red:#EF4444;
   --bg:#FFFFFF;
   --bg-soft:#EEF1FB;
   --border:#E2E8FA;
@@ -439,11 +441,20 @@ footer{ padding:64px 0 36px; }
 .lecture-download{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
   font-weight:700; font-size:13.5px; color:var(--blue); background:var(--bg-soft);
-  border:1px solid var(--border); border-radius:10px; padding:11px 14px; margin-top:auto;
+  border:1px solid ; border-radius:10px; padding:11px 14px; margin-top:auto;
   transition:background-color .18s ease, border-color .18s ease;
 }
 .lecture-download:hover{ background:var(--blue); color:var(--white); border-color:var(--blue); }
 .lecture-download svg{ width:15px; height:15px; }
+
+.video-download{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  font-weight:700; font-size:13.5px; color:var(--red); background:var(--bg-soft);
+  border:1px solid var(--red); border-radius:10px; padding:11px 14px; margin-top:auto;
+  transition:background-color .18s ease, border-color .18s ease;
+}
+.video-download:hover{ background:var(--red); color:var(--white); border-color:var(--red); }
+.video-download svg{ width:15px; height:15px; }
 .red {
   background-color: red;
   padding: 10px;
@@ -468,7 +479,7 @@ footer{ padding:64px 0 36px; }
     <div class="nav-links">
       <a href="index.html#about">About</a>
       <a href="index.html#courses">Courses</a>
-      <a href="study-material.html" style="color:red;" >Study Material</a>
+      <a href="study-material.html" >Study Material</a>
       <a href="index.html#includes">What's Included</a>
       <a href="index.html#pricing">Pricing</a>
       <a href="index.html#faq">FAQ</a>
@@ -533,96 +544,108 @@ footer{ padding:64px 0 36px; }
           <span class="lecture-num">01</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 01 &middot; Introduction to Nahw & Why Grammar Matters</h4>
+        <h4>Lecture 01 &middot; Introduction to Nahw & Four Properties of اسم</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">02</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 02 &middot; The Noun (Ism) — Basics</h4>
+        <h4>Lecture 02 &middot; Pronouns & 1st Properties of Noun (Ism)</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">03</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 03 &middot; The Verb (Fi'l) — Basics</h4>
+        <h4>Lecture 03 &middot; Last 3 Properties of Noun (Ism)</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+                <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">04</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 04 &middot; The Sentence: Nominal vs Verbal</h4>
+        <h4>Lecture 04 &middot; Compound اسم </h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">05</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 05 &middot; Mubtada & Khabar (Subject & Predicate)</h4>
+        <h4>Lecture 05 &middot; Harfs </h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+                <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">06</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 06 &middot; Fa'il — The Doer of the Verb</h4>
+        <h4>Lecture 06 &middot; Nominal Sentences</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+                <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">07</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 07 &middot; Maf'ul Bihi — The Object</h4>
+        <h4>Lecture 07 &middot; Past tense </h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+                <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">08</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 08 &middot; Idafa — The Possessive Construction</h4>
+        <h4>Lecture 08 &middot; Present tense</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+                <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">09</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 09 &middot; Harf Jarr — Prepositions</h4>
+        <h4>Lecture 09 &middot; Present Tense in depth</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+                <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">10</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 10 &middot; Introduction to I'rab (Case Endings)</h4>
+        <h4>Lecture 10 &middot; Verbal sentences</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+                <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">11</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 11 &middot; Recognizing Patterns in Qur'anic Ayat</h4>
+        <h4>Lecture 11 &middot; Incomplete verbs</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+                <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">12</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 12 &middot; Nahw I Review & Practice</h4>
+        <h4>Lecture 12 &middot; Surah Fatiha breakdown + Review</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
     </div>
   </div>
@@ -646,86 +669,97 @@ footer{ padding:64px 0 36px; }
         </div>
         <h4>Lecture 01 &middot; Introduction to Sarf & the Root System</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">02</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 02 &middot; The Trilateral Root (Al-Fi'l al-Thulathi)</h4>
+        <h4>Lecture 02 &middot; Verb pattern II </h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">03</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 03 &middot; Al-Madi — The Past Tense</h4>
+        <h4>Lecture 03 &middot; Verb pattern III</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">04</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 04 &middot; Al-Mudari' — The Present Tense</h4>
+        <h4>Lecture 04 &middot; Verb pattern IV</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">05</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 05 &middot; Al-Amr — The Command Form</h4>
+        <h4>Lecture 05 &middot; Verb pattern V</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">06</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 06 &middot; Ism al-Fa'il — The Active Participle</h4>
+        <h4>Lecture 06 &middot; Verb pattern VI</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">07</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 07 &middot; Ism al-Maf'ul — The Passive Participle</h4>
+        <h4>Lecture 07 &middot; Verb pattern VII</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">08</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 08 &middot; Al-Masdar — The Verbal Noun</h4>
+        <h4>Lecture 08 &middot; Verb pattern VIII </h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">09</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 09 &middot; The Ten Verb Forms — Overview</h4>
+        <h4>Lecture 09 &middot; Verb pattern IX</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">10</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 10 &middot; Weak Letters in Verbs (Introduction)</h4>
+        <h4>Lecture 10 &middot; Verb pattern X</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
           <span class="lecture-num">11</span>
           <span class="lecture-format">PDF</span>
         </div>
-        <h4>Lecture 11 &middot; Common Sarf Patterns in the Qur'an</h4>
+        <h4>Lecture 11 &middot; Verb pattern I &middot; 1-6</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
       <div class="lecture-card reveal">
         <div class="lecture-top">
@@ -734,6 +768,7 @@ footer{ padding:64px 0 36px; }
         </div>
         <h4>Lecture 12 &middot; Sarf I Review & Practice</h4>
         <a href="#" class="lecture-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download Slides</a>
+        <a href="#" class="video-download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>View Video</a>
       </div>
     </div>
     <p class="material-note reveal">Lecture titles follow the course syllabus and may be adjusted to match the exact order taught in class. Download links are placeholders &mdash; connect each to your actual slide file (Google Drive, Dropbox, etc.) before publishing.</p>
